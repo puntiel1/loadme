@@ -3,11 +3,12 @@ load resource when it is require, for prevent long time to lauch the webpage/app
 
 ---------------------
 addAlias(listLibrary): list of library using a key.
+
 load(keyLibrary, callback): load a library by a key, when the library is loaded, run the callback.
 
 ---------------------
 Simple example:
-
+```sh
 //loading libraries
         loadme.addAlias({
             jquery: [
@@ -41,7 +42,9 @@ Simple example:
                 '/themes/front/plugins/elevatezoom/jquery.elevateZoom-3.0.8.min.js',
             ]
         });
+```
 
+```sh
 loadme.load('jquery', function () {
     loadme.load('bootstrap', function () {
         $(document).ready(function () {
@@ -49,3 +52,4 @@ loadme.load('jquery', function () {
         });
     });
 });
+```
